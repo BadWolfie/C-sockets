@@ -40,6 +40,7 @@ void svr_start_comm(tcp_server self)
 
 	struct sockaddr_in client;
 	int client_size = sizeof(client);
+	char data_buffer[1024];
 
 	while (true) {
 		printf("Petition received... ");
@@ -48,8 +49,6 @@ void svr_start_comm(tcp_server self)
 			(socklen_t *) &client_size);
 		err_handler("(accept)", channel);
 		printf("Accepted on channel %d.\n", channel);
-
-		char data_buffer[1024];
 
 		while (true) {
 			printf("\nWaiting for a message... ");
