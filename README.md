@@ -1,5 +1,5 @@
 # C-sockets
-Code samples for Berkeley sockets in C.
+Code samples for the Berkeley sockets API in C.
 
 ### Including
 * TCP-IP sockets
